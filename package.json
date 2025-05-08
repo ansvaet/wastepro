@@ -1,0 +1,20 @@
+{
+  "name": "wastepro",
+  "version": "1.0.0",
+  "main": "telegram.js",
+  "type": "module",
+  "scripts": {
+    "start": "node telegram.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
