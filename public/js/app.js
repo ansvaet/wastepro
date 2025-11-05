@@ -143,7 +143,7 @@ class WasteProApp {
         }
 
         const compression = 3.5; // Средний коэффициент уплотнения
-        const equipmentCost = 390000; // Стоимость оборудования
+        const equipmentCost = 420000; // Стоимость оборудования
 
         // Расчеты
         const beforeVolume = containers * 1.1;

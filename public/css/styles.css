@@ -90,7 +90,7 @@ p {
     font-size: clamp(0.875rem, 2vw, 1rem);
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: var(--gray-400);
+    color: var(--gray-700);
 }
 
 .section-title {
@@ -212,7 +212,7 @@ p {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Hero Section
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(26, 54, 93, 0.95), rgba(19, 78, 74, 0.95)),
                 url('/images/industrial-bg.jpg') center/cover;
@@ -222,7 +222,7 @@ p {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     position: relative;
     overflow: hidden;
-} */
+}
 
 .hero::before {
     content: '';
@@ -398,9 +398,9 @@ p {
     box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 }
 
-.input-group input:invalid {
+/* .input-group input:invalid {
     border-color: #ef4444;
-}
+} */
 
 .calculate-btn {
     grid-column: 1 / -1;
@@ -513,6 +513,7 @@ p {
     background: var(--light);
 }
 
+/* Контейнер для видео */
 .video-container {
     position: relative;
     border-radius: var(--border-radius-xl);
@@ -533,6 +534,7 @@ p {
     transform: scale(1.02);
 }
 
+/* Кнопка воспроизведения */
 .play-button {
     position: absolute;
     top: 50%;
@@ -548,6 +550,18 @@ p {
 .play-button:hover {
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .video-container video {
+        height: 300px !important;
+        object-fit: cover;
+    }
+}
+
+/* Убираем двойные скругления */
+video::-webkit-media-controls {
+    border-radius: 25px;
 }
 
 .gallery-grid {
@@ -644,9 +658,9 @@ p {
     box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
 }
 
-.form-group input:invalid {
+/* .form-group input:invalid {
     border-color: #f87171;
-}
+} */
 
 .submit-btn {
     width: 100%;
@@ -934,11 +948,11 @@ a:focus-visible {
     .calculator-results {
         background: var(--gray-800);
         color: white;
-        border-color: var(--gray-400);
+        border-color: var(--gray-700);
     }
     
     .input-group input {
-        background: var(--gray-400);
+        background: var(--gray-700);
         border-color: var(--gray-600);
         color: white;
     }
