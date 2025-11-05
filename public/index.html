@@ -94,12 +94,12 @@
                 <h1 class="hero-title">
                     Уплотнитель отходов для контейнеров 1,1m³<br>
                     Сокращение расходов на ТКО 
-                    <span class="highlight">до 65%</span>
+                    <span class="highlight">до 70%</span>
                 </h1>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <div class="stat-label">Стоимость решения:</div>
-                        <div class="stat-value">390 000 ₽</div>
+                        <div class="stat-value">420 000 ₽</div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
@@ -120,7 +120,7 @@
                     <div class="feature-card">
                         <div class="feature-icon">💸</div>
                         <h3>Финансовая выгода</h3>
-                        <p>Снижение расходов на вывоз ТКО до 65% благодаря 4-кратному уменьшению объема отходов</p>
+                        <p>Снижение расходов на вывоз ТКО до 70% благодаря 4-кратному уменьшению объема отходов</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">⚡</div>
@@ -197,33 +197,91 @@
             </div>
         </section>
 
-        <section id="media" class="media">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="highlight">WastePro 1100</span> в работе
-                </h2>
-                <div class="video-container">
-                    <video poster="/images/video-poster.jpg" controls>
-                        <source src="/videos/process.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео тег.
-                    </video>
-                </div>
-                <div class="gallery-grid">
-                    <div class="media-card">
-                        <img src="/images/first.jpg" alt="Процесс работы уплотнителя WastePro" loading="lazy">
-                        <div class="media-caption">До уплотнения</div>
-                    </div>
-                    <div class="media-card">
-                        <img src="/images/second.jpg" alt="Установка уплотнителя отходов" loading="lazy">
-                        <div class="media-caption">Процесс установки</div>
-                    </div>
-                    <div class="media-card">
-                        <img src="/images/third.jpg" alt="Результат после уплотнения" loading="lazy">
-                        <div class="media-caption">После уплотнения</div>
+<!-- Секция с медиа -->
+<section id="media" style="padding: 100px 20px; background: var(--light);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">
+            <span style="color: var(--accent);">WastePro 1100</span>
+        </h2>
+
+        <!-- Видео-блок -->
+        <div style="position: relative; margin-bottom: 60px; border-radius: 25px; overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.1); aspect-ratio: 16/9;">
+            <video style="width: 100%; height: 100%; object-fit: cover; border-radius: 25px; cursor: pointer;"
+                   onclick="this.paused ? this.play() : this.pause()">
+                <source src="videos/process.mp4" type="video/mp4">
+            </video>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                        cursor: pointer; transition: transform 0.3s ease;"
+                 class="play-button">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="40" fill="var(--accent)" fill-opacity="0.9"/>
+                    <path d="M52 40L34 52V28L52 40Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Фото-галерея -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                     gap: 30px; margin-top: 70px;">
+            <div class="media-card"
+                 style="position: relative; border-radius: 20px; overflow: hidden; cursor: pointer;">
+                <img src="images/first.jpg" alt="До"
+                     style="width: 100%; height: 400px; object-fit: cover; transition: transform 0.3s ease;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 25px;
+                            background: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, transparent); color: white;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>До</span>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="media-card"
+                 style="position: relative; border-radius: 20px; overflow: hidden;">
+                <img src="images/second.jpg" alt="Установка"
+                     style="width: 100%; height: 400px; object-fit: cover; transition: transform 0.3s ease;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 25px;
+                            background: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, transparent); color: white;">
+                </div>
+            </div>
+
+            <div class="media-card"
+                 style="position: relative; border-radius: 20px; overflow: hidden;">
+                <img src="images/third.jpg" alt="После"
+                     style="width: 100%; height: 400px; object-fit: cover; transition: transform 0.3s ease;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 25px;
+                            background: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, transparent); color: white;">
+                    <span>После</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .media-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .play-button:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        video {
+            height: auto; /* Используем auto для сохранения пропорций */
+        }
+
+        .media-card {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Убираем двойные скругления */
+    video::-webkit-media-controls {
+        border-radius: 25px;
+    }
+</style>
 
         <section id="contact" class="contact">
             <div class="container-sm">
